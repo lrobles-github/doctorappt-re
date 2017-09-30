@@ -1,0 +1,29 @@
+<div id="nav-menu-dashboard">
+  <h4><a [routerLink]="['/']" (click)="logout()">Log Out</a></h4>
+</div>
+
+<h2>Doctor Appointments</h2>
+
+<input [(ngModel)]="searchText" placeholder="Search by patient or complaint here..." id="search-box">
+
+<table>
+
+<tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Patient Name</th>
+    <th>Complaint</th>
+</tr>
+
+<tr *ngFor="let a of appointments | filter : searchText">
+    <td>{{ a.date | date }}</td>
+    <td>{{ a.time }}</td>
+    <td>{{ a.patient }}</td>
+    <td>{{ a.complaint }}<button *ngIf="a.patient == currentuser" (click)="delete(a._id)">Cancel</button></td>
+</tr>
+
+</table>
+
+
+
+<button (click)="goToNewAppointment()">Add Appointment...</button>

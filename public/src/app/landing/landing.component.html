@@ -1,0 +1,17 @@
+
+<form (submit)="onSubmit()" method="post">
+  
+    <label for="name">
+      Enter Your Name To Login:
+    </label>
+  
+  <input 
+  required
+  type="text" 
+  name="name" 
+  [(ngModel)]="user.name"
+  >
+
+  <input type="submit" value="Login">
+  
+  </form>

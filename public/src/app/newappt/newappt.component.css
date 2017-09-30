@@ -1,0 +1,15 @@
+#block-inputs input {
+
+    display: block;
+    padding: 12px;
+    margin: 12px;
+
+}
+
+#complaint-box {
+
+    width: 280px;
+    padding: 12px;
+    margin: 12px;
+
+}

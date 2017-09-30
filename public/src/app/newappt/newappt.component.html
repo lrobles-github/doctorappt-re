@@ -1,0 +1,23 @@
+<h2>New Appointment</h2>
+
+<form (submit)="onSubmit()" method="post">
+  
+    <!-- all fields are required -->
+  
+    <div id="block-inputs">
+    <label for="date">Date</label>
+    <input required min="{{ today | date: 'y-M-d' }}" type="date" name="date" [(ngModel)]="appointment.date">
+  
+    <label for="time">Time</label>
+    <input required min="8:00" max="17:00" type="time" name="time" [(ngModel)]="appointment.time">
+    
+    <label for="complaint">Complaint</label>
+    <input required minlength="10" type="text" name="complaint" [(ngModel)]="appointment.complaint" id="complaint-box">
+
+  </div>
+
+    <button (click)="cancel()">Cancel</button>
+    <input type="submit" value="Add Appointment">
+  
+  </form>
+  
