@@ -41,7 +41,7 @@ var routes_setter = require('./server/config/routes.js');
 routes_setter(app);
 
 
-// Server to Listen on Port 8000
-app.listen(8000, function() {
-    console.log("Server started. Listening on port 8000...");
+// Server to Listen on Port 1337
+app.listen(1337, function() {
+    console.log("Server started. Listening on port 1337...");
 })
